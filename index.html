@@ -21,7 +21,8 @@
             const result = document.getElementById('result');
             if(name){
                 const Khodam = checkKhodam(name);
-                result.innerHTML = `Khodam Anda adalah : <strong>${Khodam}</strong>`;
+                result.innerHTML = `Khodam dengan nama ${name} adalah : <strong>${Khodam}</strong>`;
+                document.getElementById('name').value = '';
             }else{
                 result.innerHTML = '<span style="color : red;">Silahkan masukan Nama Anda!</span>';
             }
