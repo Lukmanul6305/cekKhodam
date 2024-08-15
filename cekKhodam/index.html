@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Khodam</title>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Cek Khodam</h1>
+        <div class="from-group">
+            <label for="name">Masukan Nama Anda :</label>
+            <input type="text" id="name" placeholder="Nama Anda">
+        </div>
+        <button id="checkButton">Khodam</button>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        document.getElementById('checkButton').addEventListener('click',function(){
+            const name = document.getElementById('name').value;
+            const result = document.getElementById('result');
+            if(name){
+                const Khodam = checkKhodam(name);
+                result.innerHTML = `Khodam Anda adalah : <strong>${Khodam}</strong>`;
+            }else{
+                result.innerHTML = '<span style="color : red;">Silahkan masukan Nama Anda!</span>';
+            }
+        });
+        function checkKhodam(name){
+            const khodams = [
+                "Nyamuk Gendut",
+                "Pocong Ngantuk",
+                "Genderuwo Nyanyi Dangdut",
+                "Kuntilanak Penakut",
+                "Wewe Gombel Penjual Cilok",
+                "Jinn Cilik Pencinta Upin Ipin",
+                "Tuyul Malas Bekerja",
+                "Pocong Fashionista",
+                "Genderuwo Penari Jaipong",
+                "Kuntilanak Pengemar K-Pop",
+                "Wewe Gombel Penjual Gorengan",
+                "Pocong Siluman",
+                "Tuyul Pencinta Es Krim",
+                "Pocong Youtuber",
+                "Genderuwo Stand Up Comedian",
+                "Kuntilanak TikTokers",
+                "Wewe Gombel Influencer",
+                "Jinn Cilik Hacker",
+                "Tuyul Trader Saham",
+                "Pocong Vlogger",
+                "Genderuwo Content Creator",
+                "Kuntilanak Ngantuk",
+                "Wewe Gombel Beauty Vlogger",
+                "Jin Cilik Youtuber Gaming",
+                "Tuyul Investor Bitcoin",
+                "Kucing Garong",
+                "Genderuwo Streamer",
+                "Kuntilanak Vlogger Traveling",
+                "Wewe Gombel Food Vlogger",
+                "Jinn Cilik Animator",
+                "Tuyul Web Developer",
+                "Pocong Influencer Motivasi",
+                "Genderuwo Life Coach",
+                "Kuntilanak Relationship Coach",
+                "Wewe Gombel Financial Advisor",
+                "Panda Ngemis",
+                "Tuyul Social Media Manager",
+                "Pocong SEO Specialist",
+                "Genderuwo Graphic Designer",
+                "Kuntilanak Video Editor",
+                "Wewe Gombel Web Designer",
+                "Jinn Cilik App Developer",
+                "Tuyul Digital Marketer",
+                "Pocong Data Analyst",
+                "Genderuwo Business Consultant",
+                "Kuntilanak HRD",
+                "Wewe Gombel Customer Service",
+                "Jinn Cilik Project Manager",
+                "Tuyul Entrepreneur",
+                "Pocong CEO",
+                "Pocong Nyanyi Dangdut",
+                "Genderuwo Penari Tiktok",
+                "Kuntilanak Gamers",
+                "Jin Lampu Aladin Versi Cimahi",
+                "Banaspati Penjaga Warteg",
+                "Siluman Ular Penjual Cilok",
+                "Khodam Semar Pembuat Tempe",
+                "Nyi Roro Kidul Penjaga Pantai Ancol",
+                "Jin Ifrit Tukang Ojek Online",
+                "Khodam Harimau Penjaga Toilet Umum",
+                "Tuyul Malas",
+                "Jin Cacing",
+                "Hantu Pocong Penakut",
+                "Genderuwo Galau",
+                "Kuntilanak Baper",
+                "Jin Lampu Bohong",
+                "Banaspati Pemarah",
+                "Siluman Ular Penipu",
+                "Khodam Semar Pelit",
+                "Nyi Roro Kidul Penjual Kerupuk",
+                "Khodam Pocong Bersuara Opera",
+                "Genderuwo Influencer Instagram",
+                "Kuntilanak Youtuber",
+                "Jin Lampu Penulis Cerita Horor",
+                "Banaspati Ahli Pijat Tradisional",
+                "Siluman Ular Penjual Sate",
+                "Khodam Semar Stand Up Comedian",
+                "Nyi Roro Kidul Penjaga Rental PS",
+                "Jin Ifrit Pemain E-Sport",
+                "Khodam Harimau Penjaga Rental Mobil",
+                "Khodam Iron Man",
+                "Genderuwo Captain America",
+                "Kuntilanak Black Widow",
+                "Jin Lampu Thor",
+                "Banaspati Hulk",
+                "Siluman Ular Spiderman",
+                "Khodam Deadpool",
+                "Nyi Roro Kidul Wonder Woman",
+                "Jin Ifrit Aquaman",
+                "Khodam Batman",
+                "Khodam Tuyul Fashionista",
+                "Genderuwo Tukang Cukur",
+                "Kuntilanak Penjual Gorengan",
+                "Jin Lampu Penjaga Warung Kopi",
+                "Banaspati Guru Ngaji",
+            ];
+
+            const index = Math.floor(Math.random()* khodams.length);
+            return khodams[index];
+        }
+    </script>
+</body>
+</html>
